@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xOe-3w-gN7">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PeopleCounter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="PeopleCounter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="b4Y-zY-zbb">
-                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <rect key="frame" x="20" y="84" width="560" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Couner 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAs-uC-gGe" userLabel="Counter 1">
                                         <rect key="frame" x="0.0" y="0.0" width="264.5" height="21"/>
@@ -42,17 +42,17 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Hl-Czd">
-                                <rect key="frame" x="20" y="69" width="560" height="411"/>
+                                <rect key="frame" x="20" y="113" width="560" height="367"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-xw-ZST" userLabel="RightCounterButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="411"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="367"/>
                                         <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="RightCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cs9-dw-Cdv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-YY-vRO" userLabel="LeftCounterButton">
-                                        <rect key="frame" x="280" y="0.0" width="280" height="411"/>
+                                        <rect key="frame" x="280" y="0.0" width="280" height="367"/>
                                         <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="LeftCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk6-KE-R49"/>
@@ -72,12 +72,75 @@
                             <constraint firstItem="H48-Hl-Czd" firstAttribute="top" secondItem="b4Y-zY-zbb" secondAttribute="bottom" constant="8" id="pal-HI-aOO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yvw-JN-oF3"/>
                     <connections>
                         <outlet property="LeftCounterButton" destination="AdT-YY-vRO" id="Gh2-sv-vUf"/>
                         <outlet property="RightCounterButton" destination="6bw-xw-ZST" id="Bb2-Pp-3uz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="131"/>
+        </scene>
+        <!--Ready View Controller-->
+        <scene sceneID="4vY-4p-M1a">
+            <objects>
+                <viewController id="6XN-sL-vaM" customClass="ReadyViewController" customModule="PeopleCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="btG-Gm-3fG"/>
+                        <viewControllerLayoutGuide type="bottom" id="nPR-zt-6ko"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mro-mJ-dKc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-0j-MDN">
+                                <rect key="frame" x="260" y="344" width="80" height="30"/>
+                                <state key="normal" title="Start Count"/>
+                                <connections>
+                                    <action selector="StartCount:" destination="6XN-sL-vaM" eventType="touchUpInside" id="rGr-wL-tfz"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oFc-NX-YxS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Count Session Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oem-jv-cVD">
+                                <rect key="frame" x="70" y="264" width="460" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ouP-0j-MDN" firstAttribute="centerX" secondItem="mro-mJ-dKc" secondAttribute="centerX" id="0B9-vn-Li9"/>
+                            <constraint firstItem="oem-jv-cVD" firstAttribute="top" secondItem="btG-Gm-3fG" secondAttribute="bottom" constant="200" id="Ep6-PI-tU3"/>
+                            <constraint firstItem="oem-jv-cVD" firstAttribute="leading" secondItem="mro-mJ-dKc" secondAttribute="leadingMargin" constant="50" id="IQQ-pr-Lij"/>
+                            <constraint firstItem="ouP-0j-MDN" firstAttribute="top" secondItem="oem-jv-cVD" secondAttribute="bottom" constant="50" id="QIt-dg-xDv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oem-jv-cVD" secondAttribute="trailing" constant="50" id="jVf-HC-HwU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tFy-ev-D9i"/>
+                    <connections>
+                        <outlet property="SessionNameText" destination="oem-jv-cVD" id="EhG-DI-sU0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrg-Xm-FHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uds-hW-gZQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xOe-3w-gN7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZJr-cd-5Fe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6XN-sL-vaM" kind="relationship" relationship="rootViewController" id="dVl-BV-vA6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEa-F4-eJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472" y="131"/>
         </scene>
