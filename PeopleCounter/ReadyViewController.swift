@@ -16,24 +16,18 @@ class ReadyViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("Ready View did load")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        /*
-         let date = NSDate()
-         let calendar = NSCalendar.currentCalendar()
-         
-         //let components = calendar.components(.CalendarUnitHour || .CalendarUnitMinute, fromDate: date)
-         let components = calendar.components(.CalendarUnitHour, fromDate: date)
-         
-         let hour = components.hour
-         //let minutes = components.minute
-         print (hour)
-         */
+        print("Ready View will Appear")
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyyMMddHHmmss"
         let timestr = dateFormatter.stringFromDate(NSDate())
         print(timestr)
         SessionNameText.text = timestr
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,11 +53,9 @@ class ReadyViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue")
         if (segue.identifier == "startCounting") {
-            print("id check")
             let counterVC = segue.destinationViewController as! CounterViewController
             let fileName = sender as! String
             counterVC.logFileName = fileName
         }
-        print("complete prepareForSegue")
     }
 }

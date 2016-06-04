@@ -61,7 +61,15 @@ class CounterViewController: UIViewController {
         RightCounterButton.setTitle(String(rightCounter), forState:UIControlState.Normal)
         logFileHandle!.seekToEndOfFile()
         logFileHandle!.writeData(timestr.dataUsingEncoding(NSUTF8StringEncoding)!)
+    }
 
+    override func viewWillDisappear(animated : Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (self.isMovingFromParentViewController()){
+            print("go back")
+            logFileHandle?.closeFile()
+        }
     }
 }
 
