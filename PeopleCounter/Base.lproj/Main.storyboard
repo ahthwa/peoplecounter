@@ -44,18 +44,18 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Hl-Czd">
                                 <rect key="frame" x="20" y="113" width="560" height="367"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-xw-ZST" userLabel="RightCounterButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-YY-vRO" userLabel="LeftCounterButton">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="367"/>
                                         <state key="normal" title="0"/>
                                         <connections>
-                                            <action selector="RightCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cs9-dw-Cdv"/>
+                                            <action selector="LeftCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zC8-cl-mmc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-YY-vRO" userLabel="LeftCounterButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-xw-ZST" userLabel="RightCounterButton">
                                         <rect key="frame" x="280" y="0.0" width="280" height="367"/>
                                         <state key="normal" title="0"/>
                                         <connections>
-                                            <action selector="LeftCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk6-KE-R49"/>
+                                            <action selector="RightCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bK2-gV-RmG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -99,7 +99,6 @@
                                 <state key="normal" title="Start Count"/>
                                 <connections>
                                     <action selector="StartCount:" destination="6XN-sL-vaM" eventType="touchUpInside" id="rGr-wL-tfz"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="oFc-NX-YxS"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Count Session Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oem-jv-cVD">
@@ -120,6 +119,7 @@
                     <navigationItem key="navigationItem" id="tFy-ev-D9i"/>
                     <connections>
                         <outlet property="SessionNameText" destination="oem-jv-cVD" id="EhG-DI-sU0"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="startCounting" id="AkE-Df-mga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrg-Xm-FHy" userLabel="First Responder" sceneMemberID="firstResponder"/>

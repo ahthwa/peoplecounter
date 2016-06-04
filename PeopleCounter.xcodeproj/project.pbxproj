@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4EAF34E41D023A260089F453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF34E31D023A260089F453 /* AppDelegate.swift */; };
-		4EAF34E61D023A260089F453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF34E51D023A260089F453 /* ViewController.swift */; };
+		4EAF34E61D023A260089F453 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF34E51D023A260089F453 /* CounterViewController.swift */; };
 		4EAF34E91D023A260089F453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF34E71D023A260089F453 /* Main.storyboard */; };
 		4EAF34EB1D023A260089F453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF34EA1D023A260089F453 /* Assets.xcassets */; };
 		4EAF34EE1D023A260089F453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF34EC1D023A260089F453 /* LaunchScreen.storyboard */; };
 		4EAF34F91D023A260089F453 /* PeopleCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF34F81D023A260089F453 /* PeopleCounterTests.swift */; };
 		4EAF35041D023A260089F453 /* PeopleCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF35031D023A260089F453 /* PeopleCounterUITests.swift */; };
+		4ECAA86E1D02A0D700EA0DFD /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAA86D1D02A0D700EA0DFD /* ReadyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		4EAF34E01D023A260089F453 /* PeopleCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAF34E31D023A260089F453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EAF34E51D023A260089F453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EAF34E51D023A260089F453 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		4EAF34E81D023A260089F453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EAF34EA1D023A260089F453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EAF34ED1D023A260089F453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		4EAF34FF1D023A260089F453 /* PeopleCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAF35031D023A260089F453 /* PeopleCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCounterUITests.swift; sourceTree = "<group>"; };
 		4EAF35051D023A260089F453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ECAA86D1D02A0D700EA0DFD /* ReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				4EAF34E31D023A260089F453 /* AppDelegate.swift */,
-				4EAF34E51D023A260089F453 /* ViewController.swift */,
+				4EAF34E51D023A260089F453 /* CounterViewController.swift */,
 				4EAF34E71D023A260089F453 /* Main.storyboard */,
+				4ECAA86D1D02A0D700EA0DFD /* ReadyViewController.swift */,
 				4EAF34EA1D023A260089F453 /* Assets.xcassets */,
 				4EAF34EC1D023A260089F453 /* LaunchScreen.storyboard */,
 				4EAF34EF1D023A260089F453 /* Info.plist */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAF34E61D023A260089F453 /* ViewController.swift in Sources */,
+				4ECAA86E1D02A0D700EA0DFD /* ReadyViewController.swift in Sources */,
+				4EAF34E61D023A260089F453 /* CounterViewController.swift in Sources */,
 				4EAF34E41D023A260089F453 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				4EAF350A1D023A260089F453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EAF350B1D023A260089F453 /* Build configuration list for PBXNativeTarget "PeopleCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				4EAF350D1D023A260089F453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EAF350E1D023A260089F453 /* Build configuration list for PBXNativeTarget "PeopleCounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				4EAF35101D023A260089F453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

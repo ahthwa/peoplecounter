@@ -53,6 +53,17 @@ class ReadyViewController: UIViewController {
     */
 
     @IBAction func StartCount(sender: AnyObject) {
+        self.performSegueWithIdentifier("startCounting", sender: SessionNameText.text)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepareForSegue")
+        if (segue.identifier == "startCounting") {
+            print("id check")
+            let counterVC = segue.destinationViewController as! CounterViewController
+            let fileName = sender as! String
+            counterVC.logFileName = fileName
+        }
+        print("complete prepareForSegue")
+    }
 }
