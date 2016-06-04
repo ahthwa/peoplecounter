@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PeopleCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="b4Y-zY-zbb">
+                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Couner 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAs-uC-gGe" userLabel="Counter 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="264.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="IDO-Hr-OdL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-Jw-xd7">
+                                        <rect key="frame" x="264" y="0.0" width="295.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="xjn-zV-Lxf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Hl-Czd">
+                                <rect key="frame" x="20" y="69" width="560" height="411"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-xw-ZST" userLabel="RightCounterButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="411"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="RightCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cs9-dw-Cdv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-YY-vRO" userLabel="LeftCounterButton">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="411"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="LeftCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk6-KE-R49"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="b4Y-zY-zbb" secondAttribute="trailing" id="2eh-gN-8Ww"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H48-Hl-Czd" secondAttribute="trailing" id="4UG-Jx-8kb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="b4Y-zY-zbb" secondAttribute="leading" id="O0F-af-MIP"/>
+                            <constraint firstItem="H48-Hl-Czd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bb6-Kv-QGf"/>
+                            <constraint firstItem="b4Y-zY-zbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="eX5-Ic-7uJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H48-Hl-Czd" secondAttribute="bottom" constant="120" id="ozV-l3-7Pw"/>
+                            <constraint firstItem="H48-Hl-Czd" firstAttribute="top" secondItem="b4Y-zY-zbb" secondAttribute="bottom" constant="8" id="pal-HI-aOO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LeftCounterButton" destination="AdT-YY-vRO" id="Gh2-sv-vUf"/>
+                        <outlet property="RightCounterButton" destination="6bw-xw-ZST" id="Bb2-Pp-3uz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="131"/>
+        </scene>
+    </scenes>
+</document>
