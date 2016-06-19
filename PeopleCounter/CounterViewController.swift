@@ -22,8 +22,6 @@ class CounterViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Counter: View Did Load Called")
-        LeftCounterButton.backgroundColor = UIColor.blueColor()
-        RightCounterButton.backgroundColor = UIColor.greenColor()
         
         logFilePath = NSHomeDirectory() + "/Documents/" + logFileName + ".txt"
         
@@ -40,25 +38,40 @@ class CounterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func LeftCounterClick(sender: AnyObject) {
-        leftCounter += 1
+    func touchLog(lc:Int, rc:Int) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddHHmmss\t1\t0\n"
+        dateFormatter.dateFormat = "yyyyMMddHHmmss\t\(lc)\t\(rc)\n"
         let timestr = dateFormatter.stringFromDate(NSDate())
-        
         LeftCounterButton.setTitle(String(leftCounter), forState:UIControlState.Normal)
         logFileHandle!.seekToEndOfFile()
         logFileHandle!.writeData(timestr.dataUsingEncoding(NSUTF8StringEncoding)!)
     }
+    
+    @IBAction func LeftDecrease(sender: AnyObject) {
+        if (leftCounter > 0) {
+            leftCounter -= 1
+            LeftCounterButton.setTitle(String(leftCounter), forState:UIControlState.Normal)
+            touchLog(-1, rc: 0)
+        }
+    }
+
+    @IBAction func RightDecrease(sender: AnyObject) {
+        if (rightCounter > 0) {
+            rightCounter -= 1
+            RightCounterButton.setTitle(String(rightCounter), forState:UIControlState.Normal)
+            touchLog(0, rc: -1)
+        }
+    }
+    
+    @IBAction func LeftCounterClick(sender: AnyObject) {
+        leftCounter += 1
+        LeftCounterButton.setTitle(String(leftCounter), forState:UIControlState.Normal)
+        touchLog(1, rc:0)
+    }
     @IBAction func RightCounterClick(sender: AnyObject) {
         rightCounter += 1
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddHHmmss\t0\t1\n"
-        let timestr = dateFormatter.stringFromDate(NSDate())
-
         RightCounterButton.setTitle(String(rightCounter), forState:UIControlState.Normal)
-        logFileHandle!.seekToEndOfFile()
-        logFileHandle!.writeData(timestr.dataUsingEncoding(NSUTF8StringEncoding)!)
+        touchLog(0, rc:1)
     }
 
     override func viewWillDisappear(animated : Bool) {

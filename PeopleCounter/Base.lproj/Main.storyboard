@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="84" width="560" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Couner 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAs-uC-gGe" userLabel="Counter 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="264.5" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="IDO-Hr-OdL"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-Jw-xd7">
-                                        <rect key="frame" x="264" y="0.0" width="295.5" height="21"/>
+                                        <rect key="frame" x="265" y="0.0" width="296" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="xjn-zV-Lxf"/>
                                         </constraints>
@@ -44,20 +44,54 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Hl-Czd">
                                 <rect key="frame" x="20" y="113" width="560" height="367"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-YY-vRO" userLabel="LeftCounterButton">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S5w-ew-dQS">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="367"/>
-                                        <state key="normal" title="0"/>
-                                        <connections>
-                                            <action selector="LeftCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zC8-cl-mmc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-xw-ZST" userLabel="RightCounterButton">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgD-qU-K7Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="qiJ-1N-H3C"/>
+                                                </constraints>
+                                                <state key="normal" title="빼기"/>
+                                                <connections>
+                                                    <action selector="LeftDecrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myp-Ay-WGf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-YY-vRO" userLabel="LeftCounterButton">
+                                                <rect key="frame" x="0.0" y="40" width="280" height="327"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="LeftCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zC8-cl-mmc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2ks-ip-v0N">
                                         <rect key="frame" x="280" y="0.0" width="280" height="367"/>
-                                        <state key="normal" title="0"/>
-                                        <connections>
-                                            <action selector="RightCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bK2-gV-RmG"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-YR-FLg">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kLD-bW-eJj"/>
+                                                </constraints>
+                                                <state key="normal" title="빼기"/>
+                                                <connections>
+                                                    <action selector="RightDecrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xf-7b-rvh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-xw-ZST" userLabel="RightCounterButton">
+                                                <rect key="frame" x="0.0" y="40" width="280" height="327"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="RightCounterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bK2-gV-RmG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
