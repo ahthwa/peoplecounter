@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xOe-3w-gN7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mxd-q6-sC1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -80,69 +80,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="131"/>
+            <point key="canvasLocation" x="-3397" y="-209"/>
         </scene>
-        <!--Ready View Controller-->
-        <scene sceneID="4vY-4p-M1a">
+        <!--Main View Controller-->
+        <scene sceneID="NoK-qZ-xv7">
             <objects>
-                <viewController id="6XN-sL-vaM" customClass="ReadyViewController" customModule="PeopleCounter" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="btG-Gm-3fG"/>
-                        <viewControllerLayoutGuide type="bottom" id="nPR-zt-6ko"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mro-mJ-dKc">
+                <tableViewController id="32f-Si-A6c" customClass="MainViewController" customModule="PeopleCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fwe-Qt-UY6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-0j-MDN">
-                                <rect key="frame" x="260" y="344" width="80" height="30"/>
-                                <state key="normal" title="Start Count"/>
-                                <connections>
-                                    <action selector="StartCount:" destination="6XN-sL-vaM" eventType="touchUpInside" id="rGr-wL-tfz"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Count Session Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oem-jv-cVD">
-                                <rect key="frame" x="70" y="264" width="460" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ouP-0j-MDN" firstAttribute="centerX" secondItem="mro-mJ-dKc" secondAttribute="centerX" id="0B9-vn-Li9"/>
-                            <constraint firstItem="oem-jv-cVD" firstAttribute="top" secondItem="btG-Gm-3fG" secondAttribute="bottom" constant="200" id="Ep6-PI-tU3"/>
-                            <constraint firstItem="oem-jv-cVD" firstAttribute="leading" secondItem="mro-mJ-dKc" secondAttribute="leadingMargin" constant="50" id="IQQ-pr-Lij"/>
-                            <constraint firstItem="ouP-0j-MDN" firstAttribute="top" secondItem="oem-jv-cVD" secondAttribute="bottom" constant="50" id="QIt-dg-xDv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oem-jv-cVD" secondAttribute="trailing" constant="50" id="jVf-HC-HwU"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="tFy-ev-D9i"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="mL9-LI-P6z">
+                            <rect key="frame" x="0.0" y="64" width="600" height="96"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Count Session Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2c-4A-Jcb">
+                                    <rect key="frame" x="70" y="8" width="460" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNi-KM-eAX">
+                                    <rect key="frame" x="260" y="46" width="80" height="30"/>
+                                    <state key="normal" title="Start Count"/>
+                                    <connections>
+                                        <action selector="StartCount:" destination="32f-Si-A6c" eventType="touchUpInside" id="ShF-Vs-KDE"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="I2c-4A-Jcb" secondAttribute="trailing" constant="70" id="F7c-pJ-uI9"/>
+                                <constraint firstItem="KNi-KM-eAX" firstAttribute="top" secondItem="I2c-4A-Jcb" secondAttribute="bottom" constant="8" id="NRw-dz-JRd"/>
+                                <constraint firstItem="I2c-4A-Jcb" firstAttribute="leading" secondItem="mL9-LI-P6z" secondAttribute="leading" constant="70" id="OoP-vs-TFR"/>
+                                <constraint firstItem="KNi-KM-eAX" firstAttribute="centerX" secondItem="mL9-LI-P6z" secondAttribute="centerX" id="Vh5-Zp-rax"/>
+                                <constraint firstItem="I2c-4A-Jcb" firstAttribute="top" secondItem="mL9-LI-P6z" secondAttribute="top" constant="8" id="cQW-0b-7w2"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PCResultCell" textLabel="tjW-Da-4Zg" style="IBUITableViewCellStyleDefault" id="5Tg-XG-ra4">
+                                <rect key="frame" x="0.0" y="209.5" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Tg-XG-ra4" id="UkJ-Aa-FRh">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tjW-Da-4Zg">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="32f-Si-A6c" id="dDf-CH-KEW"/>
+                            <outlet property="delegate" destination="32f-Si-A6c" id="GUb-o0-zHE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="aRz-5T-XXm"/>
                     <connections>
-                        <outlet property="SessionNameText" destination="oem-jv-cVD" id="EhG-DI-sU0"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="startCounting" id="AkE-Df-mga"/>
+                        <outlet property="SessionNameText" destination="I2c-4A-Jcb" id="abM-S9-cQx"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="startCounting" id="LvU-tW-S65"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrg-Xm-FHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDx-iQ-H8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="131"/>
+            <point key="canvasLocation" x="-4085" y="-209"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Uds-hW-gZQ">
+        <scene sceneID="ZQy-Th-K3W">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xOe-3w-gN7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mxd-q6-sC1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZJr-cd-5Fe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nfb-T5-iM7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="6XN-sL-vaM" kind="relationship" relationship="rootViewController" id="dVl-BV-vA6"/>
+                        <segue destination="32f-Si-A6c" kind="relationship" relationship="rootViewController" id="QLQ-EC-tV8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEa-F4-eJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNf-Ve-mOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="131"/>
+            <point key="canvasLocation" x="-4779" y="-209"/>
         </scene>
     </scenes>
 </document>

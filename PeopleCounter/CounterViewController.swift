@@ -11,7 +11,7 @@ import UIKit
 class CounterViewController: UIViewController {
     var leftCounter:Int = 0
     var rightCounter:Int = 0
-    var logFileName:String = "test.txt"
+    var logFileName:String = "test"
     var logFilePath:String = ""
     var logFileHandle:NSFileHandle?
 
@@ -25,7 +25,7 @@ class CounterViewController: UIViewController {
         LeftCounterButton.backgroundColor = UIColor.blueColor()
         RightCounterButton.backgroundColor = UIColor.greenColor()
         
-        logFilePath = NSHomeDirectory() + "/Documents/" + logFileName
+        logFilePath = NSHomeDirectory() + "/Documents/" + logFileName + ".txt"
         
         if !NSFileManager.defaultManager().fileExistsAtPath(logFilePath) {
             NSFileManager.defaultManager().createFileAtPath(logFilePath, contents: nil, attributes: nil)
@@ -38,8 +38,6 @@ class CounterViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        print("did Receive Memory Warning")
-        logFileHandle?.closeFile()
     }
 
     @IBAction func LeftCounterClick(sender: AnyObject) {
@@ -67,6 +65,7 @@ class CounterViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         if (self.isMovingFromParentViewController()){
+            logFileHandle!.writeData(("\(logFileName): \(leftCounter)/\(rightCounter)").dataUsingEncoding(NSUTF8StringEncoding)!)
             print("go back")
             logFileHandle?.closeFile()
         }
